@@ -4,5 +4,5 @@
 microserviceBuilderPipeline {
     image = 'modresortswar'
     mvnCommands = '--version'
-    test=false
+    test='false'
 }

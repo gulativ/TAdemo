@@ -29,6 +29,13 @@ spec:
       containers:
       - image: mycluster.icp:8500/default/modresortswar:latest
         name: modresortswar
+        env:
+          - name: WLP_LOGGING_CONSOLE_FORMAT
+            value: json
+          - name: WLP_LOGGING_CONSOLE_LOGLEVEL
+            value: info
+          - name: WLP_LOGGING_CONSOLE_SOURCE
+            value: message,trace,accessLog,ffdc
         ports:
         - containerPort: 9080
           protocol: TCP
